@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 22:56:19 by somartin          #+#    #+#             */
-/*   Updated: 2022/10/17 22:14:23 by somartin         ###   ########.fr       */
+/*   Updated: 2022/11/08 19:37:30 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isdigit(int i)
 {
-	if (i >= '9' && i <= '0')
+	if (i >= '0' && i <= '9')
 		return (1);
 	return (0);
 }
