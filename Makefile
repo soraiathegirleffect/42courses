@@ -3,14 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: somartin <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/06 15:59:36 by somartin          #+#    #+#              #
-#    Updated: 2022/11/06 15:59:39 by somartin         ###   ########.fr        #
+#    Updated: 2022/11/13 14:56:11 by somartin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			=	ft_isalnum.c ft_isprint.c \
+SRCS			=	ft_memset.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memchr.c\
+					ft_calloc.c ft_strdup.c ft_isalnum.c ft_isprint.c \
 					ft_strlcat.c ft_strncmp.c ft_atoi.c ft_isalpha.c \
 					ft_strchr.c  ft_strlcpy.c \
 					ft_strnstr.c ft_bzero.c ft_isascii.c \
