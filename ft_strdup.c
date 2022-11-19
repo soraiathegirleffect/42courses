@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 14:55:29 by somartin          #+#    #+#             */
-/*   Updated: 2022/11/13 18:28:21 by somartin         ###   ########.fr       */
+/*   Updated: 2022/11/19 14:47:46 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ char	*ft_strdup(const char *s)
 {
 	size_t	i;
 	size_t	c;
-	
 	char	*strd;
 
 	c = 0;
