@@ -17,18 +17,18 @@ char	*ft_strdup(const char *s)
 	size_t	i;
 	size_t	c;
 	
-	char	*str;
+	char	*strd;
 
 	c = 0;
-	i = ft_strlen(s);
-	str = malloc(sizeof(char) * (i + 1));
-	if (!str)
+	i = ft_strlen(s) + 1;
+	strd = malloc(sizeof(char) * i);
+	if (!strd)
 		return (NULL);
-	while (c < i)
+	while (i > c)
 	{
-		str[c] = s[c];
+		strd[c] = s[c];
 		c++;
 	}
-	str[c] = '\0';
-	return (str);
+	strd[c] = '\0';
+	return (strd);
 }
