@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 19:11:42 by somartin          #+#    #+#             */
-/*   Updated: 2022/11/19 18:25:58 by somartin         ###   ########.fr       */
+/*   Updated: 2022/11/19 20:17:02 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	start;
 	size_t	end;
 	char	*str;
-	
+
 	start = 0;
 	end = ft_strlen(s1);
 	if (!set || !s1)
