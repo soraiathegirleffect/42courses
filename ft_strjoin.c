@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 19:11:16 by somartin          #+#    #+#             */
-/*   Updated: 2022/11/19 15:29:23 by somartin         ###   ########.fr       */
+/*   Updated: 2022/11/20 17:10:09 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!str)
-		return (0);
+		return (NULL);
 	while (s1[i])
 	{
 		str[i] = s1[i];
