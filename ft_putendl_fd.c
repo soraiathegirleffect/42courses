@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 18:40:43 by somartin          #+#    #+#             */
-/*   Updated: 2022/11/19 19:28:07 by somartin         ###   ########.fr       */
+/*   Updated: 2022/11/20 19:02:06 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	write(fd, s, strlen(s));
+	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);
 }
