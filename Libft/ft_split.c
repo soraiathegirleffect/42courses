@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 19:11:55 by somartin          #+#    #+#             */
-/*   Updated: 2022/11/20 17:59:31 by somartin         ###   ########.fr       */
+/*   Updated: 2022/11/26 17:36:15 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	**ft_split(char const *s, char c)
 {
 	char	**str;
 	int		i;
-	int		end;
+	int		start;
 	int		k;
 
 	i = 0;
@@ -49,12 +49,12 @@ char	**ft_split(char const *s, char c)
 	{
 		while (s[i] == c)
 			i++;
-		end = i;
+		start = i;
 		while (s[i] && s[i] != c)
 			i++;
-		if (i > end)
+		if (i > start)
 		{
-			str[k] = ft_substr(s, end, i - end);
+			str[k] = ft_substr(s, start, i - start);
 			k++;
 		}
 	}

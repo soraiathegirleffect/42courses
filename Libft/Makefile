@@ -6,7 +6,7 @@
 #    By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/06 15:59:36 by somartin          #+#    #+#              #
-#    Updated: 2022/11/20 19:19:23 by somartin         ###   ########.fr        #
+#    Updated: 2022/11/26 17:35:29 by somartin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ fclean:			clean
 
 re:				fclean $(NAME)
 
-bonus:			$(BONUS_OBJS)
+bonus:			$(OBJS) $(BONUS_OBJS)
 				ar rcs $(NAME) $(BONUS_OBJS)
 
 .PHONY:			all clean fclean re bonus
