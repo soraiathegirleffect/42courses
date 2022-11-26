@@ -37,7 +37,7 @@ char	**ft_split(char const *s, char c)
 {
 	char	**str;
 	int		i;
-	int		end;
+	int		start;
 	int		k;
 
 	i = 0;
@@ -49,12 +49,12 @@ char	**ft_split(char const *s, char c)
 	{
 		while (s[i] == c)
 			i++;
-		end = i;
+		start = i;
 		while (s[i] && s[i] != c)
 			i++;
-		if (i > end)
+		if (i > start)
 		{
-			str[k] = ft_substr(s, end, i - end);
+			str[k] = ft_substr(s, start, i - start);
 			k++;
 		}
 	}
