@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 19:32:58 by somartin          #+#    #+#             */
-/*   Updated: 2022/12/08 17:09:30 by somartin         ###   ########.fr       */
+/*   Updated: 2022/12/08 18:53:53 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_putchar(char c)
 	return (write(1, &c, 1));
 }
 
-int	ft_checkprintf(char str, va_list args)
+static int	ft_checkprintf(char str, va_list args)
 {
 	if (str == 'c')
 		return (ft_putchar(va_arg(args, int)));
