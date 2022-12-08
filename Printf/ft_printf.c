@@ -6,11 +6,16 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 19:32:58 by somartin          #+#    #+#             */
-/*   Updated: 2022/12/04 19:59:52 by somartin         ###   ########.fr       */
+/*   Updated: 2022/12/08 17:09:30 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int	ft_putchar(char c)
+{
+	return (write(1, &c, 1));
+}
 
 int	ft_checkprintf(char str, va_list args)
 {
@@ -29,7 +34,7 @@ int	ft_checkprintf(char str, va_list args)
 	if (str == '%')
 		return (ft_putchar(str));
 	if (str == 'p')
-		return (ft_putpointer(args));
+		return (ft_putptr(args));
 	else
 		return (0);
 }
@@ -37,8 +42,8 @@ int	ft_checkprintf(char str, va_list args)
 int	ft_printf(const char *str, ...)
 {
 	va_list	args;
-	int	i;
-	int	len;
+	int		i;
+	int		len;
 
 	i = 0;
 	len = 0;
