@@ -6,13 +6,13 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 13:01:41 by somartin          #+#    #+#             */
-/*   Updated: 2022/12/08 17:23:09 by somartin         ###   ########.fr       */
+/*   Updated: 2022/12/08 18:04:22 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 
