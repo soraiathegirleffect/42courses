@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 19:37:41 by somartin          #+#    #+#             */
-/*   Updated: 2022/12/08 18:57:10 by somartin         ###   ########.fr       */
+/*   Updated: 2022/12/08 19:01:44 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <stdarg.h> 
 # include <unistd.h>
 # include <stdlib.h>
-# include <stddef.h>
 # include <limits.h>
 
 int				ft_printf(const char *str, ...);
