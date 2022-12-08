@@ -6,35 +6,31 @@
 #    By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/25 19:38:09 by somartin          #+#    #+#              #
-#    Updated: 2022/12/08 18:13:19 by somartin         ###   ########.fr        #
+#    Updated: 2022/12/08 18:25:37 by somartin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	libftprintf.a
+SRCS		=	ft_printf.c	ft_check.c
 
-CC = cc
+OBJS		=	$(SRCS:.c=.o)
 
-CFLAGS = -Wall -Wextra -Werror
+CC			=	gcc
+RM			=	rm -f
+CFLAGS		=	-Wall -Wextra -Werror
 
-AR = ar -rcs
+NAME		=	libftprintf.a
 
-RM = rm -rf
+all:			$(NAME)
 
-SRCS	=	ft_printf.c	ft_check.c
-
-OBJ = $(SRC:.c=.o)
-
-all: $(NAME)
-
-$(NAME): $(OBJ)
-	$(AR) $(NAME) $(OBJ)
+$(NAME):		$(OBJS)
+				ar rcs $(NAME) $(OBJS)
 
 clean:
-	$(RM) $(OBJ)
+				$(RM) $(OBJS)
 
-fclean: clean
-	$(RM) $(NAME)
+fclean:			clean
+				$(RM) $(NAME)
 
-re: fclean all
+re:				fclean $(NAME)
 
-.PHONY: all clean fclean re
+.PHONY:			all clean fclean re
