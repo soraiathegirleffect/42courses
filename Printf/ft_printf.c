@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 19:32:58 by somartin          #+#    #+#             */
-/*   Updated: 2022/12/08 18:53:53 by somartin         ###   ########.fr       */
+/*   Updated: 2022/12/08 19:12:53 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,22 +21,21 @@ static int	ft_checkprintf(char str, va_list args)
 {
 	if (str == 'c')
 		return (ft_putchar(va_arg(args, int)));
-	if (str == 's')
+	else if (str == 's')
 		return (ft_putstr(va_arg(args, char *)));
-	if (str == 'd' || str == 'i')
+	else if (str == 'd' || str == 'i')
 		return (ft_putnbr_base(va_arg(args, int), "0123456789"));
-	if (str == 'u')
+	else if (str == 'u')
 		return (ft_putnbr_base(va_arg(args, unsigned int), "0123456789"));
-	if (str == 'x')
+	else if (str == 'x')
 		return (ft_putnbr_base(va_arg(args, unsigned int), "0123456789abcdef"));
-	if (str == 'X')
+	else if (str == 'X')
 		return (ft_putnbr_base(va_arg(args, unsigned int), "0123456789ABCDEF"));
-	if (str == '%')
+	else if (str == '%')
 		return (ft_putchar(str));
-	if (str == 'p')
+	else if (str == 'p')
 		return (ft_putptr(args));
-	else
-		return (0);
+	return (0);
 }
 
 int	ft_printf(const char *str, ...)
