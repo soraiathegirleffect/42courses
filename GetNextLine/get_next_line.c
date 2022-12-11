@@ -3,11 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: somartin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 14:31:41 by somartin          #+#    #+#             */
-/*   Updated: 2022/12/10 14:31:43 by somartin         ###   ########.fr       */
+/*   Updated: 2022/12/10 15:26:21 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "get_next_line.h"
 
+char *get_next_line(int fd)
+{
+	
+}
