@@ -6,50 +6,50 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 14:32:10 by somartin          #+#    #+#             */
-/*   Updated: 2022/12/28 22:09:56 by somartin         ###   ########.fr       */
+/*   Updated: 2022/12/30 16:23:38 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
-char	*ft_strjoin(char *s1, char *s2)
-{
-	char	*joined;
-	int		i;
-	int		j;
-
-	if (s2[0] == '\0')
-		return (0);
-	joined = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (!joined)
-		return (0);
-	i = 0;
-	while (s1 && s1[i])
-	{
-		joined[i] = s1[i];
-		i++;
-	}
-	j = 0;
-	while (s2[0] && s2[j] && s2[j] != '\n')
-		joined[i++] = s2[j++];
-	if (s2[j] == '\n')
-		joined[i++] = '\n';
-	joined[i] = '\0';
-	if (s1)
-		free(s1);
-	return (joined);
-}
 
 size_t	ft_strlen(char *s)
 {
 	size_t	i;
 
 	i = 0;
-	while (s && s[i] && s[i] != '\n')
-		i++;
-	if (s && s[i] == '\n')
+	if (!s)
+		return (i);
+	while (s[i] != '\0')
 		i++;
 	return (i);
+}
+
+char	*ft_strjoin(char *s1, char *s2)
+{
+	char	*str;
+	int		i;
+	int		j;
+
+	i = 0;
+	j = 0;
+	if (s2[0] == '\0')
+		return (0);
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!str)
+		return (0);
+	while (s1 && s1[i])
+	{
+		str[i] = s1[i];
+		i++;
+	}
+	while (s2 && s2[j] && s2[j] != '\n')
+		str[i++] = s2[j++];
+	if (s2[j] == '\n')
+		str[i++] = '\n';
+	str[i] = '\0';
+	if (s1)
+		free(s1);
+	return (str);
 }
 
 int	ft_clean(char *str)
