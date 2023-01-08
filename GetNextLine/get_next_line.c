@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 14:31:41 by somartin          #+#    #+#             */
-/*   Updated: 2022/12/30 19:43:38 by somartin         ###   ########.fr       */
+/*   Updated: 2023/01/08 17:11:47 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ char	*get_next_line(int fd)
 	return (next_line);
 }
 
-/*int    main(void)
+/* #include <fcntl.h>
+int    main(void)
 {
     char    *line;
     int        i;
