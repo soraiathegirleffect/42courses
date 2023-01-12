@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 16:09:54 by somartin          #+#    #+#             */
-/*   Updated: 2022/12/30 21:26:49 by somartin         ###   ########.fr       */
+/*   Updated: 2023/01/12 20:22:55 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,11 +62,15 @@ int	ft_clean(char *str)
 	is_nl = 0;
 	while (str[i])
 	{
-		if (is_nl)
-			str[j++] = str[i];
+		if (is_nl == 1)
+		{
+			str[j] = str[i];
+			j++;
+		}
 		if (str[i] == '\n')
 			is_nl = 1;
-		str[i++] = '\0';
+		str[i] = '\0';
+		i++;
 	}
 	return (is_nl);
 }

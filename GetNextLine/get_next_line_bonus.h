@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 19:22:06 by somartin          #+#    #+#             */
-/*   Updated: 2022/12/30 19:23:56 by somartin         ###   ########.fr       */
+/*   Updated: 2023/01/12 20:27:08 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <limits.h>
 # ifndef  BUFFER_SIZE
 #  define  BUFFER_SIZE 1
 # endif

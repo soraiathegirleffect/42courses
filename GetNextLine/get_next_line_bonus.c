@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 16:09:59 by somartin          #+#    #+#             */
-/*   Updated: 2022/12/30 19:42:36 by somartin         ###   ########.fr       */
+/*   Updated: 2023/01/12 20:25:06 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*get_next_line(int fd)
 	int			i;
 
 	if (fd < 0 || BUFFER_SIZE < 1 || FOPEN_MAX < fd)
-		return (0);
+		return (NULL);
 	next_line = ft_strjoin(0, buff[fd]);
 	if (ft_clean(buff[fd]) > 0)
 		return (next_line);
