@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 20:30:37 by somartin          #+#    #+#             */
-/*   Updated: 2023/04/18 00:12:19 by somartin         ###   ########.fr       */
+/*   Updated: 2023/04/18 13:55:56 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,25 @@
 
 char pathfinder(char *cmd, char **envp)
 {
-	char **mypaths;
-	char **mycmdargs;
-	char *cmd;
+	char **arrayofpaths;
+	char *thepath;
+	char *tmp;
+	int i = 0;
 
-	while (*envp && !ft_strnstr(*envp, "PATH=", 5))
-		envp++;
-	PATH_from_envp = ft_substr(*envp, 5, ft_strlen(*envp) - 5);
-	mypaths = ft_split(PATH_from_envp, ":");
-	mycmdargs = ft_split(cmd, " ");
-	
+	while (ft_strnstr(envp[i], "PATH=", 5) == 0)
+		i++;
+	arrayofpaths = ft_split(envp[i] + 5, ":"); /*split() to delimit the paths according to ":" and store them in a double pointer*/
+	i = 0;
+	while (arrayofpaths[i])
+    {
+        tmp = ft_strjoin(arrayofpaths[i], "/"); /*strjoin() to append a "/" to the end of each path, and add the user command*/
+        thepath = ft_strjoin(tmp, cmd);
+        free(tmp);
+        if (access(thepath, F_OK | X_OK) == 0) /*test each path with access() then return the valid path*/
+            return (thepath);
+        i++;
+    }
+    return (0);
 }
 
 void	grogu(int fd[2], char *infile, char *cmd, char **envp)
