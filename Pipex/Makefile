@@ -1,18 +1,35 @@
 NAME	= pipex
+
 CC	= gcc
-SRCS	= pipex.c
-BSRCS	= pipex_bonus.c bonustuff.c 
-FLAGS	= -Wall -Werror -Wextra -fsanitize=address
+
+CFLAGS	= -Wall -Werror -Wextra -fsanitize=address
+
 RM	= rm -f
 
+SRC	= pipex.c
 
-all:	$(NAME)
-clean:	${RM} ${NAME}
-fclean:	clean
-	make -C libft fclean
+OBJS = $(SRC:.c=.o)
 
-re:	fclean all
+LIBFT = libft/libft.a
 
+LIBFT_PATH = libft/
 
+$(LIBFT): $(shell make -C $(LIBFT_PATH) -q libft.a)
+		make -C $(LIBFT_PATH)
 
-.PHONY: all re clean fclean
+$(NAME):		$(OBJ) $(LIBFT)
+				$(CC) $(CFLAGS) $(OBJ) $(LIBFT) 
+
+all:			$(NAME)
+
+clean:
+				make clean -C $(LIBFT_PATH)
+				$(RM) $(OBJ)
+
+fclean: 		clean
+				make fclean -C $(LIBFT_PATH)
+				$(RM) $(NAME)
+
+re:		fclean	$(NAME)
+
+.PHONY: all clean fclean re
