@@ -1,26 +1,25 @@
-NAME	= pipex
+NAME = pipex
 
-CC	= gcc
+CC = @cc
 
-CFLAGS	= -Wall -Werror -Wextra -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -g -o pipex
 
-RM	= rm -f
+RM = @rm -f
 
-SRC	= pipex.c
+SRC = pipex.c
 
-OBJS = $(SRC:.c=.o)
+OBJ = $(SRC:.c=.o)
 
+LIBFT_PATH = libft
 LIBFT = libft/libft.a
 
-LIBFT_PATH = libft/
-
-$(LIBFT): $(shell make -C $(LIBFT_PATH) -q libft.a)
-		make -C $(LIBFT_PATH)
-
-$(NAME):		$(OBJ) $(LIBFT)
+$(NAME):		$(OBJ)
 				$(CC) $(CFLAGS) $(OBJ) $(LIBFT) 
 
-all:			$(NAME)
+all:			dolib $(NAME)
+
+dolib:
+	@$(MAKE) -C $(LIBFT_PATH)
 
 clean:
 				make clean -C $(LIBFT_PATH)
