@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 20:39:38 by somartin          #+#    #+#             */
-/*   Updated: 2023/04/24 20:40:45 by somartin         ###   ########.fr       */
+/*   Updated: 2023/04/24 20:48:58 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
-# include "libft/libft.h"
+# include "Libft/libft.h"
 
 # define PIXEL 50
 
