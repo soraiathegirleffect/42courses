@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 20:34:30 by somartin          #+#    #+#             */
-/*   Updated: 2023/04/23 23:36:26 by somartin         ###   ########.fr       */
+/*   Updated: 2023/04/26 18:22:55 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,10 @@
 # include <fcntl.h> /*for file control options and flags*/
 # include <sys/wait.h> /*for pid_t, waitpid*/
 
+# ifndef  BUFFER_SIZE
+#  define  BUFFER_SIZE 1
+
+char	*get_next_line(int fd);
 void	exec(char *argv, char **envp);
 char	*pathfinder(char *cmd, char **envp);
 size_t	ft_strlen(const char *str);
