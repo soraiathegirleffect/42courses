@@ -1,8 +1,8 @@
 NAME = pipex
 
-SRC = pipex.c ft_split.c ft_strjoin.c ft_strnstr.c ft_substr.c ft_strlen.c get_next_line.c ex.c
+SRC = pipex.c ft_split.c ft_strjoin.c ft_strnstr.c ft_substr.c ft_strlen.c ex.c
 
-BONUS	=	pipex_bonus.c ex_bonus.c
+BONUS	=	pipex_bonus.c get_next_line.c ft_strncmp.c
 
 RM = rm -f
 
@@ -10,8 +10,8 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror -g -o pipex -fsanitize=address
 
-OBJ = $(SRC:.c=.o)
-BONUS_OBJS		= $(BONUS:.c=.o)
+OBJ				= $(SRC:.c=.o)
+BONUS_OBJ		= $(BONUS:.c=.o)
 
 $(NAME):		$(OBJ)
 				$(CC) $(CFLAGS) $(OBJ)
@@ -26,6 +26,7 @@ fclean: 		clean
 
 re:		fclean	$(NAME)
 
-bonus:	$(OBJ) $(BONUS_OBJ)
+bonus:			$(BONUS_OBJ)
+				$(CC) $(CFLAGS) $(BONUS_OBJ)
 
 .PHONY: all clean fclean re bonus

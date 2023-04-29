@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 21:52:25 by somartin          #+#    #+#             */
-/*   Updated: 2023/04/29 21:52:37 by somartin         ###   ########.fr       */
+/*   Updated: 2023/04/29 23:57:16 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,10 @@
 # include <fcntl.h> /*for file control options and flags*/
 # include <sys/wait.h> /*for pid_t, waitpid*/
 
-char	*get_next_line(int fd);
+int		get_next_line(char **line);
 void	exec(char *argv, char **envp);
 char	*pathfinder(char *cmd, char **envp);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlen(const char *str);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n);
 char	**ft_split(char const *s, char c);

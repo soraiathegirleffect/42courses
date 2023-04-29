@@ -1,40 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/26 18:20:22 by somartin          #+#    #+#             */
-/*   Updated: 2023/04/29 23:56:16 by somartin         ###   ########.fr       */
+/*   Created: 2022/10/19 23:22:27 by somartin          #+#    #+#             */
+/*   Updated: 2023/04/29 23:37:22 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
-int	get_next_line(char **line)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char	*buffer;
-	int		i;
-	int		r;
-	char	c;
+	size_t	i;
 
 	i = 0;
-	r = 0;
-	buffer = (char *)malloc(10000);
-	if (!buffer)
-		return (-1);
-	r = read(0, &c, 1);
-	while (r && c != '\n' && c != '\0')
+	while ((s1[i] == s2[i]) && s1[i] && (n > 0))
 	{
-		if (c != '\n' && c != '\0')
-			buffer[i] = c;
 		i++;
-		r = read(0, &c, 1);
+		n--;
 	}
-	buffer[i] = '\n';
-	buffer[++i] = '\0';
-	*line = buffer;
-	free(buffer);
-	return (r);
+	if (n == 0)
+		return (0);
+	return ((unsigned char)(s1[i]) - (unsigned char)(s2[i]));
 }
