@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/14 20:34:30 by somartin          #+#    #+#             */
-/*   Updated: 2023/04/26 18:22:55 by somartin         ###   ########.fr       */
+/*   Created: 2023/04/29 21:52:25 by somartin          #+#    #+#             */
+/*   Updated: 2023/04/29 21:52:37 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,6 @@
 # include <errno.h> /*for perror print a system error message*/
 # include <fcntl.h> /*for file control options and flags*/
 # include <sys/wait.h> /*for pid_t, waitpid*/
-
-# ifndef  BUFFER_SIZE
-#  define  BUFFER_SIZE 1
 
 char	*get_next_line(int fd);
 void	exec(char *argv, char **envp);
