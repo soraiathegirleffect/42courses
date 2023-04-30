@@ -6,12 +6,13 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 20:30:37 by somartin          #+#    #+#             */
-/*   Updated: 2023/04/29 21:51:22 by somartin         ###   ########.fr       */
+/*   Updated: 2023/04/30 13:23:18 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"pipex.h"
-
+/* Child process that run inside a fork, take the filein, put the output in a 
+pipe and then exec. fd[0] R, fd[1] for W. Child WRITEs, Parent READSs*/
 void	grogu(int *fd, char **av, char **envp)
 {
 	int		infd;
@@ -29,6 +30,8 @@ void	grogu(int *fd, char **av, char **envp)
 	close(fd[1]);
 }
 
+/* Parent process that take the data from the pipe, change the output for the
+ fileout and also close with the exec function, */
 void	mando(int *fd, char **av, char **envp)
 {
 	int		outfd;
@@ -45,6 +48,8 @@ void	mando(int *fd, char **av, char **envp)
 	exec(av[3], envp);
 	close(fd[0]);
 }
+/* envp is an array of pointers to environment variables, 
+we use: pipex filein cmd1 cmd2 fileout*/
 
 int	main(int ac, char **av, char **envp)
 {

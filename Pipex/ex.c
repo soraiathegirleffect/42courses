@@ -6,12 +6,13 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 13:18:37 by somartin          #+#    #+#             */
-/*   Updated: 2023/04/23 23:59:57 by somartin         ###   ########.fr       */
+/*   Updated: 2023/04/30 13:20:43 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
-
+/* Function that take the command and send it to find_path
+ before executing it. */
 void	exec(char *argv, char **envp)
 {
 	char	**cmd;
@@ -26,6 +27,8 @@ void	exec(char *argv, char **envp)
 	}
 }
 
+/*Function that will look for the path line inside the environment, will
+ split and test each command path and then return the right one.*/
 char	*pathfinder(char *cmd, char **envp)
 {
 	char	**arrayofpaths;

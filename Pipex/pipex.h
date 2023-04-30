@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 21:52:25 by somartin          #+#    #+#             */
-/*   Updated: 2023/04/29 23:57:16 by somartin         ###   ########.fr       */
+/*   Updated: 2023/04/30 11:09:16 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <errno.h> /*for perror print a system error message*/
 # include <fcntl.h> /*for file control options and flags*/
 # include <sys/wait.h> /*for pid_t, waitpid*/
+# include <string.h>
 
 int		get_next_line(char **line);
 void	exec(char *argv, char **envp);
