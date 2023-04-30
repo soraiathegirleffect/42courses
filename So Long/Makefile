@@ -2,7 +2,7 @@ NAME    = so_long
 
 INC     = -I include
 
-LIBFTDIR		= inc/libft
+LIBFTDIR	= inc/libft
 LIBFT   	= $(LIBFTDIR)/libft.a# path to libft library
 LIBMLXDIR 	= inc/minilibx-linux
 LIBMLX  	= $(LIBMLXDIR)/libmlx_Linux.a# could be /usr/lib, depends on where you decided to put your mlx library
