@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 17:08:11 by somartin          #+#    #+#             */
-/*   Updated: 2023/02/05 18:46:11 by somartin         ###   ########.fr       */
+/*   Updated: 2023/04/30 15:46:56 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,17 @@ void	push_swap(char **av)
 	sort(&pile, size);
 	free(pile.a);
 	free(pile.b);
+}
+
+int	main(int ac, char **av)
+{
+	if (ac > 1)
+	{
+		av++;
+		if (ac == 2)
+			av = ft_split(*av, ' ');
+		push_swap(av);
+		return (0);
+	}
+	return (0);
 }

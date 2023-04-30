@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 13:18:37 by somartin          #+#    #+#             */
-/*   Updated: 2023/04/30 13:20:43 by somartin         ###   ########.fr       */
+/*   Updated: 2023/04/30 15:57:59 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,12 @@ char	*pathfinder(char *cmd, char **envp)
 		free(tmp);
 		if (access(thepath, F_OK) == 0)
 			return (thepath);
+		free(thepath);
 		i++;
 	}
-	free(thepath);
+	i = -1;
+	while (arrayofpaths[++i])
+		free(arrayofpaths[i]);
 	free(arrayofpaths);
 	return (0);
 }
