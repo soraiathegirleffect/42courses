@@ -2,7 +2,7 @@ NAME    = so_long
 
 INC     = -I include
 
-IBFTDIR		= inc/libft
+LIBFTDIR		= inc/libft
 LIBFT   	= $(LIBFTDIR)/libft.a# path to libft library
 LIBMLXDIR 	= inc/minilibx-linux
 LIBMLX  	= $(LIBMLXDIR)/libmlx_Linux.a# could be /usr/lib, depends on where you decided to put your mlx library
@@ -33,7 +33,7 @@ $(NAME): runlibft $(OBJ)
 	$(CC) -o $(NAME) $(OBJ) $(LFLAGS)
 
 runlibft:
-	make -C libft --no-print-directory
+	make -C $(LIBFTDIR) --no-print-directory
 
 clean:
 	rm -f $(OBJ)

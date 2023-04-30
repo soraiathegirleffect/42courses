@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.c                                          :+:      :+:    :+:   */
+/*   new_program.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/24 20:27:19 by somartin          #+#    #+#             */
-/*   Updated: 2023/04/30 17:00:26 by somartin         ###   ########.fr       */
+/*   Created: 2023/04/30 16:23:05 by somartin          #+#    #+#             */
+/*   Updated: 2023/04/30 16:37:54 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/so_long.h"
 
-int	main(void)
+t_win	new_program(int w, int h, char *str)
 {
-	t_win	tutorial;
+	void	*mlx_ptr;
 
-	tutorial = new_program(300, 300, "Soraia Game");
-	if (!tutorial.mlx_ptr || !tutorial.win_ptr)
-		return (1);
-	mlx_loop(tutorial.mlx_ptr);
-	return (0);
+	mlx_ptr = mlx_init();
+	return ((t_win){mlx_ptr, mlx_new_window (mlx_ptr, w, h, str), w, h});
 }
