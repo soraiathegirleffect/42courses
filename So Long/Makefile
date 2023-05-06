@@ -17,7 +17,7 @@ OBJ     = $(SRC:%.c=%.o)# convert source files to binary list
 
 
 ifeq ($(UNAME), Darwin) # iMac / iOS
-	CC = gcc
+	CC = cc
 	LFLAGS += -framework OpenGL -framework AppKit
 else ifeq ($(UNAME), FreeBSD) # FreeBSD
 	CC = clang
