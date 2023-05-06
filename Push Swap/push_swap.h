@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 17:02:19 by somartin          #+#    #+#             */
-/*   Updated: 2023/02/05 17:27:42 by somartin         ###   ########.fr       */
+/*   Updated: 2023/05/06 14:02:42 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,7 @@ typedef struct all_piles
 	int	size_a;
 	int	size_b;
 }	x_pile;
+
+#endif
 
 void	push_swap(char **av);
