@@ -16,12 +16,12 @@ SRC     = $(wildcard src/*.c)# list your source files
 OBJ     = $(SRC:%.c=%.o)# convert source files to binary list
 
 ifeq ($(UNAME), Darwin) # iMac / iOS
-	CC = cc
+	CC = gcc
 	LFLAGS += -framework OpenGL -framework AppKit
 else ifeq ($(UNAME), FreeBSD) # FreeBSD
 	CC = clang
 else #Linux and others...
-	CC = cc
+	CC = gcc
 	LFLAGS += -lbsd -lXext -lX11 -lm
 endif
 
