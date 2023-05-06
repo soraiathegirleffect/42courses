@@ -15,14 +15,13 @@ LFLAGS  	= -L$(LIBMLXDIR) -lmlx -L${LIBFTDIR} -lft -fsanitize=address# if you de
 SRC     = $(wildcard src/*.c)# list your source files
 OBJ     = $(SRC:%.c=%.o)# convert source files to binary list
 
-
 ifeq ($(UNAME), Darwin) # iMac / iOS
 	CC = cc
 	LFLAGS += -framework OpenGL -framework AppKit
 else ifeq ($(UNAME), FreeBSD) # FreeBSD
 	CC = clang
 else #Linux and others...
-	CC = gcc
+	CC = cc
 	LFLAGS += -lbsd -lXext -lX11 -lm
 endif
 
