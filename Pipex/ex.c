@@ -12,7 +12,7 @@
 
 #include "pipex.h"
 /* Function that take the command and send it to find_path
- before executing it. */
+ before executing it. IN future create freeall func*/
 void	exec(char *argv, char **envp)
 {
 	char	**cmd;
