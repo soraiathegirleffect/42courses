@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 17:48:28 by somartin          #+#    #+#             */
-/*   Updated: 2023/05/09 22:59:22 by somartin         ###   ########.fr       */
+/*   Updated: 2023/05/09 23:01:42 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ps_atoi(const char *str, int *pile)
 {
 	int	i;
 	int	sign;
-	int	result;
+	unsigned int	result;
 
 	i = 0;
 	sign = 1;
