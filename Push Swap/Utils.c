@@ -6,12 +6,12 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 17:48:28 by somartin          #+#    #+#             */
-/*   Updated: 2023/02/05 18:46:35 by somartin         ###   ########.fr       */
+/*   Updated: 2023/05/09 22:58:01 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-#include "../printf/ft_printf.h"
+#include "Printf/ft_printf.h"
 #include <stdlib.h>
 
 int	ps_strlen(char **av)
@@ -31,7 +31,7 @@ void	error(int *pile)
 {
 	free(pile);
 	ft_printf("Error\n");
-	exit (1); /* EXIT_FAILURE */
+	exit (1);
 }
 
 int	ps_atoi(const char *str, int *pile)
@@ -46,19 +46,15 @@ int	ps_atoi(const char *str, int *pile)
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
 	if (str[i] == '-')
-	{
 		sign = -1;
-		i++;
-	}
-	else if (str[i] == '+')
-		i++;
+	i++;
 	while (str[i] && str[i] >= '0' && str[i] <= '9')
 	{
 		result = result * 10 + (str[i] - 48);
 		i++;
 	}
 	if (str[i] < '0' || str[i] > '9')
-			error(pile);
+		error(pile);
 	if ((number > 2147483648 && sign == -1)
 		|| (number > 2147483647 && sign == 1))
 		error(pile);

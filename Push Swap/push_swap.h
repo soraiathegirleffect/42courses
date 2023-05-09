@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/05 17:02:19 by somartin          #+#    #+#             */
-/*   Updated: 2023/05/06 14:02:42 by somartin         ###   ########.fr       */
+/*   Created: 2023/05/09 22:48:55 by somartin          #+#    #+#             */
+/*   Updated: 2023/05/09 22:52:50 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ typedef struct all_piles
 	int	*b;
 	int	size_a;
 	int	size_b;
-}	x_pile;
-
-#endif
+}	t_pile;
 
 void	push_swap(char **av);
+
+#endif

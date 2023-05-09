@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 17:08:11 by somartin          #+#    #+#             */
-/*   Updated: 2023/05/06 14:03:58 by somartin         ###   ########.fr       */
+/*   Updated: 2023/05/09 22:52:16 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,21 @@
 
 void	push_swap(char **av)
 {
-	x_pile		pile; /* Declare pile as type x_piles */
+	t_pile		pile;
 	int			size;
 	int			i;
 
 	i = 1;
 	size = ps_strlen(av);
-	pile.a = malloc(size * sizeof(int)); /* pile.specification */
+	pile.a = malloc(size * sizeof(int));
 	if (!pile.a)
-		return 0;
+		return ;
 	pile.size_a = size;
 	pile.b = malloc(size * sizeof(int));
 	if (!pile.b)
 	{
 		free(pile.a);
-		return 0;
+		return ;
 	}
 	pile.size_b = 0;
 	while (i++ < size)
