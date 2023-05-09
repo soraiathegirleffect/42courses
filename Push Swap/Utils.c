@@ -6,7 +6,7 @@
 /*   By: somartin <somartin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 17:48:28 by somartin          #+#    #+#             */
-/*   Updated: 2023/05/09 22:58:01 by somartin         ###   ########.fr       */
+/*   Updated: 2023/05/09 22:59:22 by somartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,8 @@ int	ps_atoi(const char *str, int *pile)
 	}
 	if (str[i] < '0' || str[i] > '9')
 		error(pile);
-	if ((number > 2147483648 && sign == -1)
-		|| (number > 2147483647 && sign == 1))
+	if ((result > 2147483648 && sign == -1)
+		|| (result > 2147483647 && sign == 1))
 		error(pile);
 	return (result * sign);
 }
